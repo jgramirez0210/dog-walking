@@ -7,9 +7,6 @@ from deshawnapi.models import City
 class CityView(ViewSet):
 
     def retrieve(self, request, pk=None):
-        """
-        Retrieve a single city record based on the primary key in the request URL.
-        """
         # Step 1: Get a single city based on the primary key in the request URL
         city = City.objects.get(pk=pk)
 
@@ -19,10 +16,7 @@ class CityView(ViewSet):
         # Step 3: Send JSON response to client with 200 status code
         return Response(serialized.data, status=status.HTTP_200_OK)
 
-    def list(self, _):
-        """
-        Retrieve all city records from the database.
-        """
+    def list(self, request):
         # Step 1: Get all city data from the database
         cities = City.objects.all()
 
