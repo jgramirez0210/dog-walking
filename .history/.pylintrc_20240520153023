@@ -10,13 +10,3 @@
 [TYPECHECK]
 ignore-missing-imports=yes
 generated-members=objects
-
-[TYPECHECK]
-# Remove 'ignore-missing-imports=yes'
-
-[MESSAGES CONTROL]
-# Update '--disable' options
-disable=
-  # Remove 'no-self-use'
-  # Remove 'imported-auth-user'
-  # Add other checks to disable here
